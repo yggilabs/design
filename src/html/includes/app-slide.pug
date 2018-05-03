@@ -1,0 +1,65 @@
+template#template
+  style.
+    * {
+      box-sizing: border-box;
+    }
+    
+    :host {
+      height: var(--height, 80vh);
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: [full-start] 25% [content-start] 1fr [content-end] 25% [full-end];
+      grid-template-rows: [full-start title-start] auto [title-end subtitle-start] auto [subtitle-end] 1fr [full-end];      
+      overflow: hidden;      
+      color: var(--font-color, #ffffff);
+
+    }
+    
+    :host::before {
+      content: '';
+      background-color: var(--background-color, #212121);
+      background-image: var(--background-image, none);      
+      background-size: cover;
+      transition: background-color 300ms;
+      grid-row: full;
+      grid-column: full;
+    }
+    
+    ::slotted(:not([slot=title],[slot=sub-title])) {
+      display: none;
+    }
+    
+    ::slotted([slot=title]) {
+      grid-row: title;
+      grid-column: content;
+      font-size: 1em;
+      transform: translateY(50%);
+      transition: opacity 300ms, transform 300ms;
+    }    
+    
+    ::slotted([slot=sub-title]) {
+      grid-row: subtitle;
+      grid-column: content;
+      font-size: 1em;      
+      transform: translateX(50%);
+      transition: opacity 300ms, transform 300ms;
+    }
+    
+    :host(.observable) ::slotted(*) {
+      opacity: 0;
+    }
+    
+    :host(.observable.active) ::slotted([slot=title]) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    :host(.observable.active) ::slotted([slot=sub-title]) {
+      opacity: .42;
+      transform: translateX(0);
+    }
+  
+  slot(name="title")
+  slot(name="sub-title")
+script
+  include ../../scripts/app/slide.js
