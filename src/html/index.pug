@@ -1,15 +1,13 @@
 doctype html
-html(lang="en")
+html(amp lang="en")
   head    
-    script(src="https://www.googletagmanager.com/gtag/js?id=UA-116382541-3", async)
-    script
-      include ../scripts/gtag.js
     meta(charset='utf-8')
     script(async src="https://cdn.ampproject.org/v0.js")
+    // script(async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js")
     link(rel="canonical" href="https://yggilabs.github.io/design")
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='description' content='some description')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1')
     title Board
     // Disable tap highlight on IE
     meta(name='msapplication-tap-highlight' content='no')
@@ -40,9 +38,3 @@ html(lang="en")
     link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='preload', as='style', onload='this.onload=null;this.rel="stylesheet"')
     noscript
       link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
-  
-  script
-    include ../scripts/sw-loader.js
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js', integrity='sha256-fUVqCtpScUF69qkFkeuHmcShr2N2UleRQJhRG4etHds=', crossorigin='anonymous')
-  script(src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver")
-  script(src='bundle.js')
