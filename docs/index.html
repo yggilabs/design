@@ -3,6 +3,8 @@
   <head>   
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-app-banner" src="https://cdn.ampproject.org/v0/amp-app-banner-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <!-- script(async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js")-->
     <link rel="canonical" href="https://yggilabs.github.io/design">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,4 +35,31 @@
     </noscript>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
+  <body>
+    <amp-app-banner id="demo-app-banner-2134" layout="nodisplay">
+      <amp-img src="https://example.com/icon.png" width="60" height="51"></amp-img>
+      <h3>App Name</h3>
+      <p>Experience a richer experience on our mobile app!</p>
+      <div class="actions">
+        <button open-button>Get the app</button>
+      </div>
+    </amp-app-banner>
+    <form method="post" action-xhr="https://example.com/subscribe" target="_top">
+      <fieldset>
+        <label><span>Name:</span>
+          <input type="text" name="name" required="">
+        </label><br>
+        <label><span>Email:</span>
+          <input type="email" name="email" required="">
+        </label><br>
+        <input type="submit" value="Subscribe">
+      </fieldset>
+      <div submit-success="">
+        <template type="amp-mustache">Subscription successful!</template>
+      </div>
+      <div submit-error="">
+        <template type="amp-mustache">Subscription failed!</template>
+      </div>
+    </form>
+  </body>
 </html>

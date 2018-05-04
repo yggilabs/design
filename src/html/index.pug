@@ -3,6 +3,8 @@ html(amp lang="en")
   head    
     meta(charset='utf-8')
     script(async src="https://cdn.ampproject.org/v0.js")
+    script(async custom-element="amp-app-banner" src="https://cdn.ampproject.org/v0/amp-app-banner-0.1.js")
+    script(async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js")
     // script(async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js")
     link(rel="canonical" href="https://yggilabs.github.io/design")
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
@@ -33,3 +35,29 @@ html(amp lang="en")
       style(amp-boilerplate).
         body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
     link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
+  body
+    amp-app-banner#demo-app-banner-2134(layout='nodisplay')
+      amp-img(src='https://example.com/icon.png' width='60' height='51')
+      h3 App Name
+      p Experience a richer experience on our mobile app!
+      .actions
+        button(open-button) Get the app
+    form(method='post' action-xhr='https://example.com/subscribe' target='_top')
+      fieldset
+        label
+          span Name:
+          input(type='text' name='name' required='')
+        br
+        label
+          span Email:
+          input(type='email' name='email' required='')
+        br
+        input(type='submit' value='Subscribe')
+      div(submit-success='')
+        template(type='amp-mustache')
+          | Subscription successful!
+      div(submit-error='')
+        template(type='amp-mustache')
+          | Subscription failed!
+
+    
