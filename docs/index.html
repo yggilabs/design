@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
   <head>   
-    <script src="https://www.googletagmanager.com/gtag/js?id=UA-116382541-3" async></script>
-    <script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-116382541-3');
-
-    </script>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- script(async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js")-->
     <link rel="canonical" href="https://yggilabs.github.io/design">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="some description">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Board</title>
     <!-- Disable tap highlight on IE-->
     <meta name="msapplication-tap-highlight" content="no">
@@ -66,23 +60,4 @@ gtag('config', 'UA-116382541-3');
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </noscript>
   </head>
-  <script>(() => {
-  "use strict";
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-        .then(function(reg) {
-          // registration worked
-          console.log('Registration succeeded. Scope is ' + reg.scope);
-        }).catch(function(error) {
-          // registration failed
-          console.log('Registration failed with ' + error);
-        });
-  }
-})();
-
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js" integrity="sha256-fUVqCtpScUF69qkFkeuHmcShr2N2UleRQJhRG4etHds=" crossorigin="anonymous"></script>
-  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-  <script src="bundle.js"></script>
 </html>
