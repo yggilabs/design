@@ -5,6 +5,8 @@ html(lang="en")
     script
       include ../scripts/gtag.js
     meta(charset='utf-8')
+    script(async src="https://cdn.ampproject.org/v0.js")
+    link(rel="canonical" href="https://yggilabs.github.io/design")
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='description' content='some description')
     meta(name='viewport' content='width=device-width, initial-scale=1')
@@ -27,55 +29,18 @@ html(lang="en")
     meta(name='msapplication-TileColor' content='#2F3BA2')
     // Color the status bar on mobile devices
     meta(name='theme-color' content='#2F3BA2')
+    style(amp-boilerplate).  
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}    
+    noscript
+      style(amp-boilerplate).
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
     style
       include ../styles/main.less
     link(href='includes/app.html', rel='import', async)
     link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='preload', as='style', onload='this.onload=null;this.rel="stylesheet"')
     noscript
       link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet')
-  app-toolbar(style="--font-color: #ffffff; --background-color: #212121;")
-    h1(slot="title") HN
-    app-button(slot="nav") ...
-  app-carousel
-    app-slide.observable(style="--font-color: #212121; --background-color: #ffffff; --background-image: url('https://previews.123rf.com/images/paffy/paffy1502/paffy150200076/36478773-handsome-man-fashion-model-with-toupee-sitting-on-stone-stairs-in-summertime-over-city-background-Stock-Photo.jpg');")
-      h2(slot="title") The hair you were meant to have
-      h3(slot="sub-title")
-    app-slide.observable
-      h2(slot="title") Precisely measured
-      h3(slot="sub-title") No hassle directly from your phone
-    app-slide.observable
-      h2(slot="title") Expertly crafted
-      h3(slot="sub-title") Over 15 minutes of exerience in the inmdustry
-  app-button Get Measured
-  style.
-    .color {
-      display:grid; 
-      grid-template-columns: [full-start left-start] 1fr [left-end right-start] 1fr [right-end full-end];
-    }
-    
-    .color__base {
-      grid-column: full;
-      grid-row: 1;
-    }
-    
-    .color__gray {
-      grid-column: right;
-      grid-row: 1;
-    }    
-  .color
-    app-carousel.color__base
-      each k,v in {'blue':'#123456','black':'#212121','maroon':'#873245'}
-        app-slide(style="--height: 4em; --background-color: " + k)
-          h2(slot="title")= v
-    app-carousel.color__gray
-      each k in [0,25,50,75,100]
-        if k < 100
-          app-slide(style="--height: 4em; --font-color:#212121; --background-color: #fff; opacity: ." + k)
-            h2(slot="title")= k + "%"
-        else
-          app-slide(style="--height: 4em; --font-color:#212121; --background-color: #fff; opacity: 1")
-            h2(slot="title") 100%
-  include includes/app-checkout
+  
   script
     include ../scripts/sw-loader.js
   script(src='https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js', integrity='sha256-fUVqCtpScUF69qkFkeuHmcShr2N2UleRQJhRG4etHds=', crossorigin='anonymous')
