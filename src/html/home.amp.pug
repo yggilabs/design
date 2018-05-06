@@ -1,3 +1,8 @@
+.
+  ---
+  hero: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31655536_2072826832971331_8631002180226121728_n.jpg?_nc_cat=0%26oh=b994d78f8d72408f0bc82dcee2d325c7%26oe=5B5A245F
+  ---
+    
 doctype html
 //
   -
@@ -76,8 +81,8 @@ amp-sidebar#header-sidebar.ampstart-sidebar.px3(layout='nodisplay')
 .center
   // Start Fullpage Hero
   figure.ampstart-image-fullpage-hero.m0.relative.mb4
-    amp-img(width='404' height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='responsive' src='images/hero.jpg' media='(max-width: 415px)')
-    amp-img(height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='fixed-height' src='images/hero.jpg' media='(min-width: 416px)')
+    amp-img(width='404' height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='responsive' src='{{ page.hero }}' media='(max-width: 415px)')
+    amp-img(height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='fixed-height' src='{{ page.hero }}' media='(min-width: 416px)')
     figcaption.absolute.top-0.right-0.bottom-0.left-0
       header.p3
         h1.ampstart-fullpage-hero-heading.mb3
