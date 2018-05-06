@@ -39,8 +39,7 @@ head
 // Start Navbar
 header.ampstart-headerbar.fixed.flex.justify-start.items-center.top-0.left-0.right-0.pl2.pr4
   .ampstart-navbar-trigger.pr2(role='button' aria-label='open sidebar' on='tap:header-sidebar.toggle' tabindex='0')
-    | &#x2630;
-  .ampstart-headerbar-title.mx-auto {{ page.title }}
+    | &#x2630;  
 | {% include sidebar.html %}
 // End Navbar
 .center
@@ -49,12 +48,10 @@ header.ampstart-headerbar.fixed.flex.justify-start.items-center.top-0.left-0.rig
     amp-img(width='404' height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='responsive' src='{{ page.hero }}' media='(max-width: 415px)')
     amp-img(height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='fixed-height' src='{{ page.hero }}' media='(min-width: 416px)')
     figcaption.absolute.top-0.right-0.bottom-0.left-0
-      //header.p3
+      header.p3
         h1.ampstart-fullpage-hero-heading.mb3
           span.ampstart-fullpage-hero-heading-text
-            span.h6.block.caps Welcome to
-            span.h1.block.bold.caps.my1 Beck &amp; Galo
-            span.h6.block.caps Modern American Cuisine
+            span.h1.block.caps {{ page.title }}
       footer.absolute.left-0.right-0.bottom-0
         a.ampstart-btn.inline-block.ampstart-fullpage-hero-cta.h5.m3.text-decoration-none(href='menu.amp.html') View Menu
   // End Fullpage Hero
