@@ -1,5 +1,6 @@
 .
   ---
+  title: Fish Bowl Pok&#233;
   hero: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31655536_2072826832971331_8631002180226121728_n.jpg?_nc_cat=0&oh=b994d78f8d72408f0bc82dcee2d325c7&oe=5B5A245F
   feature: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31758285_2074519162802098_666002741591539712_o.jpg?_nc_cat=0&oh=36e6e858ce21af2515aebaa662b73fc1&oe=5B4E9172
   ---
@@ -19,7 +20,7 @@ doctype html
   limitations under the License.
 head
   meta(charset='utf-8')
-  title Beck &amp; Galo
+  title {{ page.title }}
   link(rel='canonical' href='https://www.ampstart.com/templates/themes_2/home.amp')
   meta(name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1')
   script(async='' src='https://cdn.ampproject.org/v0.js')
@@ -131,5 +132,5 @@ main#content(role='main')
 // Start Footer
 footer.ampstart-footer.flex.flex-column.items-center.px3
   small
-    | &copy; Fish Bowl Pok&#233;
+    | &copy; {{ page.title }}
 // End Footer
