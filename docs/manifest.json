@@ -4,11 +4,11 @@
   "icons": [
     {
       "src":"images/touch/chrome-touch-icon-192x192.png",
-      "sizes": "192x192 ",
+      "sizes": "512x512 ",
       "type": "image/png"
     }
   ],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "?utm_source=homescreen",
   "background_color": "#317EFB",
   "Theme_color": "#317EFB",
   "display": "standalone"

@@ -1,8 +1,9 @@
 (() => {
-const CACHE_NAME = 'cache-v2';
+const CACHE_NAME = 'cache-v8';
 const urlsToCache = [
   '',
-  'index.html'
+  'index.html',
+  'menu.html'
 ];
 
 self.addEventListener('install', function(event) {
