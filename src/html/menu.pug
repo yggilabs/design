@@ -8,7 +8,14 @@
 main#content(role='main')
   article.px3.py4
     h1.h4.mb4 Menu
+    | {% for category in site.data.menu %}
     h2.h1.my4 Breakfast
+    dl.clearfix
+      | {% for item in category %}
+      dt.col.col-10.h2.mb1 Caramel Banana Waffles  
+      | {% endfor %}
+    | {% endfor %}
+    
     dl.clearfix
       dt.h5.mb2.block.regular Chef&rsquo;s Pick
       dd.m0
