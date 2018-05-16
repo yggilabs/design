@@ -18,14 +18,15 @@ html(⚡ lang="en")
     limitations under the License.
   | {% include head.html %}
   // Start Navbar
-  | {% include navbar.html %}
-  // End Navbar
-  // Start Sidebar
-  | {% include sidebar.html %}
-  // End Sidebar
-  // Start Content
-  | {{ content }}
-  // End Content
-  // Start Footer
-  | {% include footer.html %}
-  // End Footer
+  body
+    | {% include navbar.html %}
+    // End Navbar
+    // Start Sidebar
+    | {% include sidebar.html %}
+    // End Sidebar
+    // Start Content
+    | {{ content }}
+    // End Content
+    // Start Footer
+    | {% include footer.html %}
+    // End Footer
