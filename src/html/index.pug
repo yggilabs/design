@@ -11,10 +11,10 @@ script(type="application/ld+json").
   {
     "@context": "http://schema.org",
     "@type": "Restaurant",
-    "url": "https://yggilabs.github.io/design/index.html",
-    "name": "Cath's Cafe",
-          "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 11:00-20:00",
-          "telephone": "+155501003344",
+    "url": "https://yggilabs.github.io/design/",
+    "name": "Fish Bowl Poke",
+          "openingHours": "Tu,We,Th,Fr,Sa,Su 11:00-21:00",
+          "telephone": "+16123542516",
           "menu": "/menu"
   }
 .center
@@ -42,7 +42,7 @@ script(type="application/ld+json").
           span.ampstart-fullpage-hero-heading-text
             span.h1.block.caps {{ page.title }}
       footer.absolute.left-0.right-0.bottom-0
-        a.ampstart-btn.inline-block.ampstart-fullpage-hero-cta.h5.m3.text-decoration-none(href='menu.html') View Menu
+        a.ampstart-btn.inline-block.ampstart-fullpage-hero-cta.h5.m3.text-decoration-none(href='menu') View Menu
   // End Fullpage Hero
 main#content(role='main')
   article.px3
@@ -56,7 +56,7 @@ main#content(role='main')
     .my4.mxn3.center
       // Start Image with heading
       figure.ampstart-image-with-heading.m0.relative.mb4
-        amp-img(src='{{ page.feature }}' alt='Happy Hour Monday through Friday 5 PM' layout='fill' class='contain')        
+        amp-img(src='{{ page.feature }}' alt='Happy Hour Monday through Friday 5 PM' layout='responsive')        
         //figcaption.absolute.right-0.bottom-0.left-0
           header.ampstart-image-heading.px2.py2.line-height-4
             h2.h1.bold Happy Hour
