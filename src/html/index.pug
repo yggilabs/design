@@ -10,15 +10,29 @@
 .center
   // Start Fullpage Hero
   figure.ampstart-image-fullpage-hero.m0.relative.mb4
+    amp-position-observer(on='scroll:parallaxTransition.seekTo(percent=event.percent)' intersection-ratios='0' layout='nodisplay')
     amp-img(width='404' height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='responsive' src='{{ page.hero }}' media='(max-width: 415px)')
     amp-img(height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='fixed-height' src='{{ page.hero }}' media='(min-width: 416px)')
+    amp-animation#parallaxTransition(layout='nodisplay')
+      script(type='application/json').
+        {
+          "duration": "1",
+          "fill": "both",
+          "direction": "reverse",
+          "animations": [{
+            "selector": ".i-amphtml-layout",
+            "keyframes": [{
+              "transform": "translateY(-30%)"
+            }]
+          }]
+        }
     figcaption.absolute.top-0.right-0.bottom-0.left-0
       header.p3
         h1.ampstart-fullpage-hero-heading.mb3
           span.ampstart-fullpage-hero-heading-text
             span.h1.block.caps {{ page.title }}
       footer.absolute.left-0.right-0.bottom-0
-        a.ampstart-btn.inline-block.ampstart-fullpage-hero-cta.h5.m3.text-decoration-none(href='menu.amp.html') View Menu
+        a.ampstart-btn.inline-block.ampstart-fullpage-hero-cta.h5.m3.text-decoration-none(href='menu.html') View Menu
   // End Fullpage Hero
 main#content(role='main')
   article.px3
