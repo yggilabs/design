@@ -1,45 +1,3 @@
-.
-  ---
-  title: Fish Bowl Pok&#233;
-  hero: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31880718_2074519646135383_2179269700230316032_o.jpg?_nc_cat=0&oh=89e8f570fc7a287f897c72e919141081&oe=5B4EB068
-  feature: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31758285_2074519162802098_666002741591539712_o.jpg?_nc_cat=0&oh=36e6e858ce21af2515aebaa662b73fc1&oe=5B4E9172
-  ---
-    
-doctype html
-//
-  -
-  Copyright 2017 The AMP Start Authors. All Rights Reserved.
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-  http://www.apache.org/licenses/LICENSE-2.0
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS-IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-head
-  meta(charset='utf-8')
-  title {{ page.title }}
-  link(rel='canonical' href='https://www.ampstart.com/templates/themes_2/home.amp')
-  meta(name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1')
-  script(async='' src='https://cdn.ampproject.org/v0.js')
-  style(amp-boilerplate='').
-    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
-  noscript
-    style(amp-boilerplate='').
-      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-  script(custom-element='amp-carousel' src='https://cdn.ampproject.org/v0/amp-carousel-0.1.js' async='')
-  script(custom-element='amp-image-lightbox' src='https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js' async='')
-  script(custom-element='amp-sidebar' src='https://cdn.ampproject.org/v0/amp-sidebar-0.1.js' async='')
-  link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CLora%7CLato' rel='stylesheet')
-  style(amp-custom='') {% include styles.css %}
-// Start Navbar
-header.ampstart-headerbar.fixed.flex.justify-start.items-center.top-0.left-0.right-0.pl2.pr4
-  .ampstart-navbar-trigger.pr2(role='button' aria-label='open sidebar' on='tap:header-sidebar.toggle' tabindex='0')
-    | &#x2630;  
-| {% include sidebar.html %}
-// End Navbar
 .center
   // Start Fullpage Hero
   figure.ampstart-image-fullpage-hero.m0.relative.mb4
@@ -92,8 +50,3 @@ main#content(role='main')
       amp-img(src='images/soup.jpg' width='300' height='200' alt='Pumpkin Soup' on='tap:lightbox' role='button' tabindex='0')
       amp-img(src='images/steak.jpg' width='300' height='200' alt='Steak' on='tap:lightbox' role='button' tabindex='0')
       amp-img(src='images/pie.jpg' width='300' height='200' alt='Key Lime Pie' on='tap:lightbox' role='button' tabindex='0')
-// Start Footer
-footer.ampstart-footer.flex.flex-column.items-center.px3
-  small
-    | &copy; {{ page.title }}
-// End Footer
