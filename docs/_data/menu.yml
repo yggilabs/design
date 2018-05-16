@@ -1,8 +1,9 @@
+featured: Chef’s Pick
 categories:
   - name: Breakfast
     items:
       - name: Caramel Banana waffles
-        chefspick: true
+        featured: true
         image:
           url: images/waffles.jpg
           label: a picture of some waffles
@@ -14,7 +15,7 @@ categories:
   - name: Soup and Salad
     items:
       - name: Pumpkin soup
-        chefspick: true
+        featured: true
         image:
           url: images/soup.jpg
           label: a picture of some soup
