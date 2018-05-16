@@ -2,11 +2,21 @@
   ---
   layout: default
   hero: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31880718_2074519646135383_2179269700230316032_o.jpg?_nc_cat=0&oh=89e8f570fc7a287f897c72e919141081&oe=5B4EB068
-  feature: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31758285_2074519162802098_666002741591539712_o.jpg?_nc_cat=0&oh=36e6e858ce21af2515aebaa662b73fc1&oe=5B4E9172
+  feature: https://scontent.ffcm1-2.fna.fbcdn.net/v/t1.0-9/31655536_2072826832971331_8631002180226121728_n.jpg?_nc_cat=0&oh=34e7759a643e7b4b60329a043701fd10&oe=5B81B15F
   title: home
   canonical: https://yggilabs.github.io/design/
   ---
-
+    
+script(type="application/ld+json").
+  {
+    "@context": "http://schema.org",
+    "@type": "Restaurant",
+    "url": "https://yggilabs.github.io/design/index.html",
+    "name": "Cath's Cafe",
+          "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 11:00-20:00",
+          "telephone": "+155501003344",
+          "menu": "/menu"
+  }
 .center
   // Start Fullpage Hero
   figure.ampstart-image-fullpage-hero.m0.relative.mb4
@@ -57,11 +67,7 @@ main#content(role='main')
       h3.mb1 Minneapolis
       p.mb0
         | 5 W 34th Street        
-      p.mb0
-        | Tue-Sun 5pm&ndash;9pm
-        br
-        | Mon closed
-        br
+      p.mb0 {{ site.hours }}
         | Phone 
         a(href="tel:6123542516") (612) 354-2516
     h2#gallery.my4.theme2-anchored Photo Gallery
