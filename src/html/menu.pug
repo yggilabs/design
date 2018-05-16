@@ -9,10 +9,10 @@ main#content(role='main')
   article.px3.py4
     h1.h4.mb4 Menu
     | {% for category in site.data.menu.categories %}
-    h2.h1.my4 category.name
+    h2.h1.my4 {{ category.name }}
     dl.clearfix
       | {% for item in category.items %}
-      dt.col.col-10.h2.mb1 item.name
+      dt.col.col-10.h2.mb1 {{ item.name }}
       | {% endfor %}
     | {% endfor %}
     
