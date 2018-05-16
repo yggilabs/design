@@ -11,7 +11,7 @@
   // Start Fullpage Hero
   figure.ampstart-image-fullpage-hero.m0.relative.mb4
     amp-position-observer(on='scroll:parallaxTransition.seekTo(percent=event.percent)' intersection-ratios='0' layout='nodisplay')
-    amp-img(width='404' height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='responsive' src='{{ page.hero }}' media='(max-width: 415px)')
+    amp-img(width='404' height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='responsive' src='{{ page.hero }}' media='(max-width: 415px)' id="parallaxImage")
     amp-img(height='720' alt='Welcome to Beck & Galo Modern American Cuisine' layout='fixed-height' src='{{ page.hero }}' media='(min-width: 416px)')
     amp-animation#parallaxTransition(layout='nodisplay')
       script(type='application/json').
@@ -20,7 +20,7 @@
           "fill": "both",
           "direction": "reverse",
           "animations": [{
-            "selector": ".i-amphtml-layout",
+            "selector": "#parallaxImage",
             "keyframes": [{
               "transform": "translateY(-30%)"
             }]
