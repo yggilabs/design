@@ -1,9 +1,25 @@
 categories:
-  - name: Brekfast
+  - name: Breakfast
     items:
       - name: Caramel Banana waffles
+        chefspick: true
+        image:
+          url: images/waffles.jpg
+          label: a picture of some waffles
+        price: 12
+        description: Belgian waffles topped with fresh banana slices, caramel sauce and powdered sugar.
       - name: Blueberry Pancakes
-  - name: Sound and Salad
+        price: 8
+        description: A stack of four fluffy pancakes filled with blueberries, topped with warm blueberry compote and whipped cream.
+  - name: Soup and Salad
     items:
       - name: Pumpkin soup
+        chefspick: true
+        image:
+          url: images/soup.jpg
+          label: a picture of some soup
+        price: 10
+        description: Orange colored soup.
       - name: Ceasar Salad
+        price: 10
+        description: Salad with ceasar dressing.
