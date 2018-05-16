@@ -1,17 +1,8 @@
 (() => {
 const CACHE_NAME = 'cache-v2';
 const urlsToCache = [
-  'index.html',
-  'main.css',
-  'bundle.js',
-  'images/',
-  'manifest.json',
-  'includes/app-carousel.html',
-  'includes/app-toolbar.html',
-  'includes/app.html',
-  'includes/app-carousel.html',
-  'includes/app-slide.html',
-  'includes/app-checkout.html',
+  '',
+  'index.html'
 ];
 
 self.addEventListener('install', function(event) {
